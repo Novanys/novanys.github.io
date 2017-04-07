@@ -6,7 +6,7 @@
         var Topics = {
             GetTopics: function(callback){
                 $http({
-                    method: 'GET',
+                    method: 'JSONP',
                     url: config.basePath + '/Topic/GetTopics/'
                 })
                 .then(function(response){
