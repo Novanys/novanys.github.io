@@ -1,0 +1,35 @@
+﻿<div class="topics-carousel">
+</div>
+    <ul ng-init="propertyName='CreateTime'"  class="orderby-list">
+        <li>
+            <input type="radio"  ng-model="propertyName" id="newest" name="order-by" ng-value="'CreateTime'" ng-click="reverse = false" />
+            <label class="user-link unselectable" for="newest">Nyast</label>
+        </li>
+        <li>
+            <input type="radio" ng-model="propertyName" id="name" name="order-by" ng-value="'Title'" ng-click="reverse = false" />
+            <label class="user-link unselectable" for="name">Namn</label>
+        </li>
+        <li>
+
+            <input type="radio" ng-model="propertyName" id="viewed" name="order-by" ng-value="'PageVisits'" ng-click="reverse = true" />
+            <label class="user-link unselectable" for="viewed">Mest visad</label>
+        </li>
+    </ul>
+<div>
+    <a class="f-btn unselectable" href="#/forum/createtopic">Ny tråd</a>
+    <br />
+    <ul style="margin-top: 26px;">
+        <li style="font-size: 13px;" class="topics" ng-repeat="topic in tCtrl.Topics | filter: tCtrl.searchQuery.search | orderBy: propertyName: reverse" >
+            <a class="topic-header topics-list topics-text" href="#/forum/{{topic.Id}}">{{topic.Title}}</a>
+            <span class="time"> - {{topic.PageVisits}} visningar</span>
+            <div>
+                <span class="user-link"><a href="#/user/{{topic.Author}}">{{topic.Author}}</a></span>
+                <span class="time"> - {{topic.CreateTime}} dagar sedan</span>
+            </div>
+            <ul class="forum-list-menu">
+                <li><a class="topics-text" href="#/forum/{{topic.Id}}#comments">{{topic.Comments}} Kommentarer</a></li>
+                <li><a class="topics-text" href="/hej">något</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="PrevailedDb-Web.config Connection String" description="PrevailedDb Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:prevaileddb.database.windows.net,1433;Initial Catalog=PrevailedDb;Persist Security Info=False;User ID=PrevailedAdmin;Password=Hej123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Rasmus\\Documents\\Visual\ Studio\ 2015\\Projects\\WebbsidaAngular\\WebbsidaAngular\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PrevailedDb']/@connectionString" />
+  </parameter>
+</parameters>

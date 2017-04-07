@@ -1,0 +1,12 @@
+﻿<div>
+    <label for="#Title">Titel</label>
+    <input id="Title" class="form-input" type="text" ng-model="tCtrl.Title"/>
+    <br />
+    <br />
+    <label for="#Text">Text</label>
+    <textarea form="Text" class="form-textarea" ng-model="tCtrl.Text"></textarea>
+    <br />
+    <a class="btn-pre-info unselectable" ng-click="tCtrl.CreateTopic(); vm.loading = true;">Skapa <div ng-if="vm.loading" class="loader"></div>
+</a><br />
+    <br />
+</div>
