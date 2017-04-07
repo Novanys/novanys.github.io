@@ -5,11 +5,10 @@
 
         var Topics = {
             GetTopics: function(callback){
-               fetch(config.basePath + '/Topic/GetTopics/', {
-                headers: {
-                    'Access-Control-Allow-Origin': '*'
-                }
-               })
+                $http({
+                    method: 'GET',
+                    url: config.basePath + '/Topic/GetTopics/'
+                })
                 .then(function(response){
                     callback(response.data);
                 });
