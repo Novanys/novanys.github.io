@@ -11,6 +11,7 @@ function config($urlMatcherFactoryProvider, $stateProvider, $urlRouterProvider, 
     $locationProvider.hashPrefix('');
     $urlRouterProvider.otherwise('/');
 
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
     $stateProvider
     .state('Home', {
         url: '',
