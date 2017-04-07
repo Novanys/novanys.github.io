@@ -6,7 +6,12 @@
         var Topics = {
             GetTopics: function(callback){
                 $http({
-                    method: 'JSONP',
+                    headers:{
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With'
+            },
+                    method: 'GET',
                     url: config.basePath + '/Topic/GetTopics/'
                 })
                 .then(function(response){
@@ -31,9 +36,11 @@
             },
             PostComment: function (cmt, callback) {
                 $http({
-                    headers: {
-                     'Access-Control-Allow-Origin': '*'
-                    },
+                     headers:{
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With'
+            },
                     method: 'POST',
                     url: config.basePath + '/Topic/PostComment/',
                     data: cmt
