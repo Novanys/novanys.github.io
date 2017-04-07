@@ -5,7 +5,10 @@
 
         var Topics = {
             GetTopics: function(callback){
-                $http.get(config.basePath + '/Topic/GetTopics/')
+                $http({
+                    method: 'GET',
+                    url: config.basePath + '/Topic/GetTopics/'
+                })
                 .then(function(response){
                     callback(response.data);
                 });
@@ -18,6 +21,9 @@
             },
             PostTopic: function(topic){
                 $http({
+                    headers: {
+                     'Access-Control-Allow-Origin': '*'
+                    },
                     method: 'POST',
                     url: config.basePath + '/Topic/PostTopic/',
                     data: topic
@@ -25,6 +31,9 @@
             },
             PostComment: function (cmt, callback) {
                 $http({
+                    headers: {
+                     'Access-Control-Allow-Origin': '*'
+                    },
                     method: 'POST',
                     url: config.basePath + '/Topic/PostComment/',
                     data: cmt
