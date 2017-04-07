@@ -6,6 +6,9 @@
         var Topics = {
             GetTopics: function(callback){
                 $http({
+                    header: {
+                     'Access-Control-Allow-Origin': '*'
+                    },
                     method: 'GET',
                     url: config.basePath + '/Topic/GetTopics/'
                 })
@@ -21,7 +24,7 @@
             },
             PostTopic: function(topic){
                 $http({
-                    headers: {
+                    header: {
                      'Access-Control-Allow-Origin': '*'
                     },
                     method: 'POST',
