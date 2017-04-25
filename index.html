@@ -1,52 +1,14 @@
-﻿<!DOCTYPE html>
-<html ng-app="app">
+<!doctype html>
+<html>
 <head>
-    <title>Prevailed</title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/site.css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-ui-router.min.js"></script>
-    <script src="Scripts/angular-messages.min.js"></script>
-    <script src="App/app.js"></script>
-    <script src="App/app.config.js"></script>
-    <script src="App/app.routing.js"></script>
+  <meta charset="utf-8">
+  <title>Ng2azure</title>
+  <base href="/">
 
-    <script src="App/services/api.service.js"></script>
-    <script src="App/services/search.service.js"></script>
-
-    <script src="App/directives/uibreadcrumb.directive.js"></script>
-
-    <script src="App/search.controller.js"></script>
-    <script src="App/pages/forum/forum.controller.js"></script>
-    <script src="App/pages/forum/topic.controller.js"></script>
-    <script src="App/pages/user/user.controller.js"></script>
-    <script src="App/pages/user/users.controller.js"></script>
-    <script src="App/pages/forum/topics.controller.js"></script>
-    <script src="App/pages/forum/createtopic.controller.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <div class="top-menu">
-        <nav class="top-menu-nav">
-            <ul class="top-menu-list">
-                <li class="top-menu-item"><a href="/">Hem</a></li>
-                <li class="top-menu-item"><a href="#/forum">Forum</a></li>
-                <li class="top-menu-item"><a href="#/users">Användare</a></li>
-            </ul>
-            <form ng-controller="navSearchController" ng-submit="submitQuery()">
-                {{Text}}
-                <input class="search-query" type="text" placeholder="Sök" ng-model="searchQuery.search" ng-view="#/forum" />
-                <i title="remove" ng-show="searchQuery.search.length" class="search-query-remove glyphicon glyphicon-remove-circle" ng-click="searchQuery.search = ''"></i>
-            </form>
-            <a href="#/login" class="top-sign-in">Logga in</a>
-        </nav>
-    </div>
-
-    <div>
-        <div ui-view="main"></div>
-    </div>
-
-</body>
+  <app-root>Loading...</app-root>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
 </html>
